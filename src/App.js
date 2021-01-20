@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
          <h1>Hai</h1>
-         <Movie/>
+         <Movie name='Maharshi' likes='123.0k' banner='https://th.bing.com/th/id/OIP.dEyezZftuInXU_j0TDXPIAHaKX?pid=Api&rs=1' hero='mahesh' />
          
     </div>
   );

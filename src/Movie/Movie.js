@@ -1,10 +1,12 @@
 import * as react from 'react';
 import './style.css';
-function Movie() {
+function Movie(props) {
     return (
     <div className='movie-card'>
-        <img src='https://th.bing.com/th/id/OIP.dEyezZftuInXU_j0TDXPIAHaKX?pid=Api&rs=1' />
-        <label>123.0k Maharshi</label>
+        <img src={props.banner}/>
+        <label>
+            {props.likes} {props.name} {props.hero}
+        </label>
     </div>
     );
 }
