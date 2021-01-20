@@ -6,7 +6,17 @@ class Calculator extends React.Component {
         b: 5
     }
     render() {
-        return <div>{this.state.a + ',' + this.state.b}</div>;
+        return <div>
+            {'Add : '+(this.state.a + this.state.b)}
+            <br/>
+            {'Sub : '+(this.state.a - this.state.b)}
+            <br/>
+            {'Mul : '+(this.state.a * this.state.b)}
+            <br/>
+            {'Div: '+(this.state.a / this.state.b)}
+            
+            
+            </div>;
     }
 }
 
