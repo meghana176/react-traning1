@@ -1,13 +1,11 @@
 import React from 'react';
-import Movies from './Movies/Movies.js';
+import Calculator from './Calculator/Calculator.js';
 
 function App() {
   return (
     <div className="App">
-      {
-         <h2>Hai</h2>
-         //<Movies/>
-}
+      <Calculator/>
+
          
     </div>
   );
