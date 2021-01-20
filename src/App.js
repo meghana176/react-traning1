@@ -4,8 +4,10 @@ import Movies from './Movies/Movies.js';
 function App() {
   return (
     <div className="App">
-         <h1>Hai</h1>
-         <Movies />
+      {
+         <h2>Hai</h2>
+         //<Movies/>
+}
          
     </div>
   );
