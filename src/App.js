@@ -1,10 +1,10 @@
 import React from 'react';
-import Calculator from './Calculator/Calculator.js';
+import LifeCycleDemo from './LifeCycleDemo/LifeCycleDemo.js';
 
 function App() {
   return (
     <div className="App">
-      <Calculator/>
+      <LifeCycleDemo a={10} />
 
          
     </div>
