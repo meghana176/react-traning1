@@ -4,11 +4,29 @@ class Calculator extends React.Component {
     state = {
         a: 10,
         b: 5
-    }
+    };
+    setA = e => {
+        this.setState({
+            a: parseInt(e.target.value)
+        });
+    };
+
+    setB = e => {
+        this.setState({
+            b: parseInt(e.target.value)
+        });
+    };
     render() {
-        return <div>
-            {'Add : '+(this.state.a + this.state.b)}
+        const add = this.state.a + this.state.b;
+        return (
+        <div>
+            <input className='inputA' onChange={this.setA} />
+            <input onChange={this.setB} />
+            <br />
+            {'A:' + this.state.a +   'B:' + this.state.b}
             <br/>
+            {'Add:' + add}
+        
             {'Sub : '+(this.state.a - this.state.b)}
             <br/>
             {'Mul : '+(this.state.a * this.state.b)}
@@ -16,7 +34,8 @@ class Calculator extends React.Component {
             {'Div: '+(this.state.a / this.state.b)}
             
             
-            </div>;
+            </div>
+        );
     }
 }
 
