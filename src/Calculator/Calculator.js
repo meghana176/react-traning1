@@ -2,38 +2,37 @@ import React from 'react';
 
 class Calculator extends React.Component {
     state = {
-        a: 10,
-        b: 5
+        a: '',
+        b: '',
+        showResult: false
     };
-    setA = e => {
+    setA = (e) => {
         this.setState({
             a: parseInt(e.target.value)
         });
     };
 
-    setB = e => {
+    setB = (e) => {
         this.setState({
             b: parseInt(e.target.value)
         });
     };
+
+    submitBtn = (e) => {
+  
+        this.setState( {showResult: true});
+    };
     render() {
-        const add = this.state.a + this.state.b;
+        const {a, b} = this.state;
         return (
         <div>
-            <input className='inputA' onChange={this.setA} />
-            <input onChange={this.setB} />
-            <br />
-            {'A:' + this.state.a +   'B:' + this.state.b}
-            <br/>
-            {'Add:' + add}
-        
-            {'Sub : '+(this.state.a - this.state.b)}
-            <br/>
-            {'Mul : '+(this.state.a * this.state.b)}
-            <br/>
-            {'Div: '+(this.state.a / this.state.b)}
-            
-            
+            <form>
+            <input type="text"  className='inputA'  value={a} onChange={this.setA} />
+            <input type="text" value={b} onChange={this.setB} />
+            <button type="button" onClick={this.submitBtn}>Result</button>
+            </form>
+            {this.state.showResult ? this.state.a+this.state.b : null}
+
             </div>
         );
     }
